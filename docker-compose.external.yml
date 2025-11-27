@@ -1,0 +1,12 @@
+version: '3.8'
+
+# For EXTERNAL PostgreSQL (online host, AWS RDS, etc.)
+# Use: docker-compose -f docker-compose.external.yml up -d
+
+services:
+  pg-backup:
+    image: lavendarsolution/postgres-backup-to-s3:latest
+    container_name: pg-backup
+    restart: unless-stopped
+    env_file:
+      - .env

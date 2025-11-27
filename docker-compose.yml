@@ -1,0 +1,19 @@
+version: '3.8'
+
+# For LOCAL PostgreSQL (Docker container)
+# Use: docker-compose up -d
+
+services:
+  pg-backup:
+    image: lavendarsolution/postgres-backup-to-s3:latest
+    container_name: pg-backup
+    restart: unless-stopped
+    env_file:
+      - .env
+    networks:
+      - postgres-network
+
+networks:
+  postgres-network:
+    external: true
+    name: ${NETWORK_NAME}

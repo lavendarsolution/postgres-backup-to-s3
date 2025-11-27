@@ -1,0 +1,26 @@
+# Environment files (contain secrets)
+.env
+*.env.local
+
+# Backup files
+*.sql
+*.sql.gz
+*.dump
+/backup/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Docker
+docker-compose.override.yml
+
+# Logs
+*.log
