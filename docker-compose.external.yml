@@ -5,7 +5,7 @@ version: '3.8'
 
 services:
   pg-backup:
-    image: lavendarsolution/postgres-backup-to-s3:latest
+    image: 0xhackingimpossible/postgres-backup-to-s3:latest
     container_name: pg-backup
     restart: unless-stopped
     env_file:
